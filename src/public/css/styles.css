@@ -1,0 +1,50 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  max-width: 1500px;
+  background: rgb(107,107,107);
+  background: linear-gradient(90deg, rgba(107,107,107,1) 0%, rgba(11,0,60,0.5886729691876751) 100%);
+}
+
+.bg-main-color {
+  background: rgb(15,202,204);
+  background: linear-gradient(90deg, rgba(15,202,204,1) 0%, rgba(83,45,253,1) 100%);
+}
+
+header, footer {
+  padding: 10px 10px;
+  min-height: 80px;
+}
+
+main {
+  padding: 25px 10px;
+  background-color: white;
+}
+
+h1.logo {
+  font-size: 2rem;
+}
+
+@media (min-width: 576px) {
+  h1.logo {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  main {
+    padding: 25px 15px;
+
+  }
+
+  header, footer {
+    padding: 10px 20px;
+    min-height: 80px;
+  }
+}
+@media (min-width: 992px) {}
+@media (min-width: 1200px) {}

@@ -1,0 +1,48 @@
+{{#if feedbacks.length}}
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th hidden="true" scope="col">id</th>
+      <th scope="col">name</th>
+      <th scope="col">e-mail</th>
+      <th scope="col">phone#</th>
+      <th scope="col">title</th>
+      <th scope="col">status</th>
+      <th scope="col">actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each feedbacks }}
+    <tr class="feedback-row">
+      <th class="index" scope="row">{{@index}}</th>
+      <td hidden="true" class="id">{{_id}}</td>
+      <td>{{this.name}}</td>
+      <td>{{email}}</td>
+      <td>{{phoneNumber}}</td>
+      <td>{{title}}</td>
+      <td>
+        {{#if status}}
+        <span class="badge badge-success">Reviewed</span>
+        {{else}}
+        <span class="badge badge-warning">Not reviewed</span>
+        {{/if}}
+      </td>
+      <td>
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <button type="button" class="btn btn-primary btn-edit">Edit</button>
+          <button type="button" class="btn btn-danger btn-delete">Del</button>
+        </div>
+
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{else}}
+<div class="alert alert-warning" role="alert">
+  <strong>Sorry!</strong> There is not any feedback to show.
+</div>
+{{/if}}
+<script src="/js/page-modules/admin.js"></script>
+
