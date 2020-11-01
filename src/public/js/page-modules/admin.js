@@ -12,7 +12,7 @@ window.onload = () => {
     btn.addEventListener('click', () => {
       const id = btn.closest('tr.feedback-row').querySelector('td.id').innerHTML.trim();
       fetch(`/api/feedbacks/${id}`, { method: 'delete' }).then(() => {
-        btn.parentElement.parentElement.remove();
+        btn.closest('tr.feedback-row').remove();
       });
     });
   });
