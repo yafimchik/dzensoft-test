@@ -1,0 +1,51 @@
+{{#if feedbacks.length}}
+<table class="table">
+  <thead>
+    <tr>
+      <th class="table-sm" scope="col">#</th>
+      <th hidden="true" scope="col">id</th>
+      <th class="table-sm" scope="col">name</th>
+      <th class="table-md" scope="col">e-mail</th>
+      <th class="table-lg" scope="col">phone#</th>
+      <th scope="col">title</th>
+      <th scope="col">status</th>
+      <th scope="col">actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each feedbacks }}
+    <tr class="feedback-row">
+      <th class="index table-sm" scope="row">{{@index}}</th>
+      <td hidden="true" class="id">{{_id}}</td>
+      <td class="table-sm">{{this.name}}</td>
+      <td class="table-md">{{email}}</td>
+      <td class="table-lg">{{phoneNumber}}</td>
+      <td>{{title}}</td>
+      <td>
+        {{#if status}}
+        <span class="badge badge-success">Reviewed</span>
+        {{else}}
+        <span class="badge badge-warning">Not reviewed</span>
+        {{/if}}
+      </td>
+      <td>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <button type="button" class="btn btn-primary btn-edit">Edit</button>
+          </div>
+          <div class="col-12 col-md-6">
+            <button type="button" class="btn btn-danger btn-delete">Del</button>
+          </div>
+        </div>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+{{else}}
+<div class="alert alert-warning" role="alert">
+  <strong>Sorry!</strong> There is not any feedback to show.
+</div>
+{{/if}}
+<script src="/js/page-modules/admin.js"></script>
+

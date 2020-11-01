@@ -1,0 +1,69 @@
+{{#with feedback}}
+<div class="row">
+  <div class="col-md-8 col-12">
+    <h2 class="text-center">Feedback => Edit</h2>
+    <form class="feedback-edit needs-validation" action="" method="PUT">
+      <div class="form-group id">
+        <label for="input-id">Feedback id</label>
+        <input name="_id" type="text" class="form-control" id="input-id" value="{{_id}}" readonly>
+      </div>
+      <div class="form-group name">
+        <label for="input-name">Name of Person</label>
+        <input name="name" type="text" class="form-control" id="input-name"value="{{name}}" required>
+      </div>
+      <div class="form-group email">
+        <label for="input-email">Email Address</label>
+        <input name="email" type="email" class="form-control" id="input-email" value="{{email}}" required>
+      </div>
+      <div class="form-group phone-number">
+        <label for="input-phone-number">Phone Number</label>
+        <input name="phoneNumber" type="tel" class="form-control" id="input-phone-number" value="{{phoneNumber}}" required>
+      </div>
+      <div class="form-group title">
+        <label for="input-title">Title of Message</label>
+        <input name="title" type="text" class="form-control" id="input-title" value="{{title}}" required>
+      </div>
+      <div class="form-group message">
+        <label for="input-message">Message</label>
+        <textarea name="message" class="form-control" id="input-message" required>{{message}}</textarea>
+      </div>
+      <div class="form-check status">
+        <input name="status" class="form-check-input {{status}}" type="checkbox" value="" id="input-status" {{#if status}}checked{{/if}}>
+        <label class="form-check-label" for="input-status">
+          Feedback Reviewed ?
+        </label>
+      </div>
+      <hr>
+      <div class="d-flex justify-content-center">
+        <div class="button-group">
+          <button type="button" class="btn btn-primary btn-save">Save feedback</button>
+          <a href="/admin" class="btn btn-primary btn-close">Close</a>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="col-md-4 col-12">
+    <h2 class="text-center">Edit log</h2>
+    <table class="table edit-log">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>user</th>
+          <th>date</th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each changeLog}}
+        <tr>
+          <th scope="row">{{@index}}</th>
+          <td>{{user.username}}</td>
+          <td>{{date}}</td>
+        </tr>
+        {{/each}}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{{/with}}
+<script src="/js/page-modules/admin-feedback.js"></script>

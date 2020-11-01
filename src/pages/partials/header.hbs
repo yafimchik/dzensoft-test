@@ -1,0 +1,15 @@
+<header class="bg-main-color">
+  <div class="row">
+    <div class="col-12 offset-md-3 col-md-6 offset-lg-2 col-lg-8 d-flex align-items-center justify-content-center">
+      <h1 class="logo text-center">DzenSoft Demo</h1>
+    </div>
+    {{#if isAuth}}
+    <div class="offset-5 offset-md-0 col-2 col-md-3 col-lg-2 d-flex align-items-center justify-content-center">
+      <a href="/api/users/logout" class="btn btn-light btn-logout">Logout</a>
+    </div>
+    {{/if}}
+  </div>
+
+
+  <nav></nav>
+</header>
