@@ -52,8 +52,6 @@ button.btn-edit {
   margin-bottom: 10px;
 }
 
-#input-message {}
-
 @media (min-width: 576px) {
   .table-sm {
     display: table-cell;

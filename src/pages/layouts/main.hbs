@@ -1,11 +1,15 @@
 {{> head }}
 <body>
-  {{> header }}
-  <main>
+  <header class="container-xl bg-main-color">
+    {{> header }}
+  </header>
+  <main class="container-xl">
     {{{ body }}}
     {{> modals }}
   </main>
-  {{> footer }}
+  <footer class="container-xl bg-main-color d-flex align-items-center justify-content-center">
+    {{> footer }}
+  </footer>
   {{> scripts }}
 </body>
 </html>
