@@ -12,6 +12,7 @@ window.onload = () => {
       };
       httpSend(`/api/feedbacks/`, 'post', body, () => {
         showSendOkModal();
+        document.querySelector('form').classList.remove('was-validated');
         document.querySelector('form').reset();
       }, showError);
     }

@@ -30,12 +30,40 @@ h1.logo {
   font-size: 2rem;
 }
 
+form {
+  margin-bottom: 20px;
+}
+
+.table-sm,
+.table-lg,
+.table-md {
+  display: none;
+}
+
+td {
+  word-break: break-all;
+}
+
+button.btn-edit {
+  margin-bottom: 10px;
+}
+
+#input-message {}
+
 @media (min-width: 576px) {
+  .table-sm {
+    display: table-cell;
+  }
+
   h1.logo {
     font-size: 3rem;
   }
 }
 @media (min-width: 768px) {
+  .table-md {
+    display: table-cell;
+  }
+
   main {
     padding: 25px 15px;
 
@@ -46,5 +74,9 @@ h1.logo {
     min-height: 80px;
   }
 }
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+  .table-lg {
+    display: table-cell;
+  }
+}
 @media (min-width: 1200px) {}

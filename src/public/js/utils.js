@@ -33,7 +33,7 @@ function showSaveOkModal() {
   $('#modal-success-save').modal('show');
   setTimeout(() => {
     $('#modal-success-save').modal('hide');
-    window.location.href = '';
+    window.location.href = '/admin';
   }, 1500);
 }
 
@@ -48,12 +48,13 @@ function showError(text = '') {
   setErrorText(text);
   $('#modal-error').modal('show');
   setTimeout(() => {
-    $('#modal-error').modal('hide')
+    $('#modal-error').modal('hide');
   }, 2000);
 }
 
 function checkFormValidity() {
   const form = document.querySelector('form.needs-validation');
+  form.classList.add('was-validated');
   isFormValid = true;
   if (form) {
     isFormValid = form.checkValidity();

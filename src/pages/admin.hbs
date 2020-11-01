@@ -2,11 +2,11 @@
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
+      <th class="table-sm" scope="col">#</th>
       <th hidden="true" scope="col">id</th>
-      <th scope="col">name</th>
-      <th scope="col">e-mail</th>
-      <th scope="col">phone#</th>
+      <th class="table-sm" scope="col">name</th>
+      <th class="table-md" scope="col">e-mail</th>
+      <th class="table-lg" scope="col">phone#</th>
       <th scope="col">title</th>
       <th scope="col">status</th>
       <th scope="col">actions</th>
@@ -15,11 +15,11 @@
   <tbody>
     {{#each feedbacks }}
     <tr class="feedback-row">
-      <th class="index" scope="row">{{@index}}</th>
+      <th class="index table-sm" scope="row">{{@index}}</th>
       <td hidden="true" class="id">{{_id}}</td>
-      <td>{{this.name}}</td>
-      <td>{{email}}</td>
-      <td>{{phoneNumber}}</td>
+      <td class="table-sm">{{this.name}}</td>
+      <td class="table-md">{{email}}</td>
+      <td class="table-lg">{{phoneNumber}}</td>
       <td>{{title}}</td>
       <td>
         {{#if status}}
@@ -29,11 +29,14 @@
         {{/if}}
       </td>
       <td>
-        <div class="btn-group" role="group" aria-label="Basic example">
-          <button type="button" class="btn btn-primary btn-edit">Edit</button>
-          <button type="button" class="btn btn-danger btn-delete">Del</button>
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <button type="button" class="btn btn-primary btn-edit">Edit</button>
+          </div>
+          <div class="col-12 col-md-6">
+            <button type="button" class="btn btn-danger btn-delete">Del</button>
+          </div>
         </div>
-
       </td>
     </tr>
     {{/each}}

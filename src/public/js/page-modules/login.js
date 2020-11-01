@@ -1,7 +1,7 @@
-let btnLogin;
+let form;
 window.onload = () => {
-  btnLogin = document.querySelector('button.btn-login');
-  btnLogin.addEventListener('click', () => {
+  form = document.querySelector('form.login');
+  form.addEventListener('submit', () => {
     if (checkFormValidity()) {
       const body = {
         username: document.querySelector('#input-username').value.trim(),
