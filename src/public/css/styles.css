@@ -6,6 +6,7 @@ body {
   min-height: 100%;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  justify-content: center;
   max-width: 1500px;
   background: rgb(107,107,107);
   background: linear-gradient(90deg, rgba(107,107,107,1) 0%, rgba(11,0,60,0.5886729691876751) 100%);
