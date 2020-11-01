@@ -40,6 +40,10 @@ form {
   display: none;
 }
 
+.badge {
+  padding: 7px;
+}
+
 td {
   word-break: break-all;
 }
